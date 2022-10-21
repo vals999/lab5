@@ -1,0 +1,28 @@
+<%= form_with model: @monster do  |m| %>
+
+<div class= "field">
+    <%= m.label :nombre %><br>
+    <%= m.text_field :nombre %>
+</div>
+
+<div class= "area">
+    <%= m.label :descripcion %><br>
+    <%= m.text_area :descripcion, :cols => 25, :rows => 5 %>
+</div>
+
+<div class= "field">
+    <%= m.label :telefono %><br>
+    <%= m.telephone_field :telefono %>
+</div>
+
+<div class= "filed">
+    <%= m.label :Fecha_de_nacimiento %><br>
+    <%= m.datetime_local_field :Fecha_de_nacimiento, max: "2004-01-01T00:00" %>
+</div>
+
+<div class= "button">
+    <br>
+    <%= m.submit "Confirmar"%>
+</div>
+
+<% end %>
